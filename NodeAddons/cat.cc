@@ -5,12 +5,12 @@ using namespace v8;
 
 Handle<Value> Method(const Arguments& args) {
   HandleScope scope;
-  return scope.Close(String::New("world"));
+  return scope.Close(String::New("Meowwwwwww.... !"));
 }
 
 void init(Handle<Object> exports) {
-  exports->Set(String::NewSymbol("hello"),
+  exports->Set(String::NewSymbol("cat"),
       FunctionTemplate::New(Method)->GetFunction());
 }
 
-NODE_MODULE(hello, init)
+NODE_MODULE(cat, init)
