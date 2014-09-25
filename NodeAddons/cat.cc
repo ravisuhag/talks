@@ -9,8 +9,8 @@ Handle<Value> Method(const Arguments& args) {
 }
 
 void init(Handle<Object> exports) {
-  exports->Set(String::NewSymbol("cat"),
+  exports->Set(String::NewSymbol("speak"),
       FunctionTemplate::New(Method)->GetFunction());
 }
 
-NODE_MODULE(cat, init)
+NODE_MODULE(nodecat, init)
